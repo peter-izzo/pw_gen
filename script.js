@@ -113,32 +113,25 @@ function generatePassword() {
   } else{
     console.log("Please try again");
   };
-  
-  var result;
-   
-  console.log(passLength);
 
-  function getRandom(arr, n) {
-    var result = new Array(n),
-        // len = arr.length,
-        taken = new Array(n);
-    if (n > passLength)
-        throw new RangeError("getRandom: more elements taken than available");
-    while (n--) {
-        var x = Math.floor(Math.random() * passLength);
-        result[n] = arr[x in taken ? taken[x] : x];
-        taken[x] = --passLength in taken ? taken[passLength] : passLength;
-    }
-    return result.join('');
+  //initializes the pw into an empty array so...
+  password = []
+
+  /**
+   * we can loop through the z array we created earlier
+   * that included all the options chosen, 
+   * taking a random element from z and pushing it
+   * to the password array until the length chosen at the beginning is met
+   */
+  for (let i = 0; i < passLength; i++) {
+    var random = z[Math.floor(Math.random() * z.length)];
+    password.push(random);
+    
   }
 
+  //writes to the screen the password created
+  return password.join('');
 
-  // //Return the random values to display the password generated
-  // function finalPass () {
-  //   return "Final Password";
-  // }
-  getRandom(z, passLength);
-  return result;
 
 
 }

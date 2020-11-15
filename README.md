@@ -38,7 +38,7 @@ THEN the password is either displayed in an alert or written to the page
 - The password is returned to the space provided so the user can quickly copy and paste it where they need to
 
 ### Screenshot of Work
-![password-gen-screenshot](./assets/screenshot.png)
+![password-gen-screenshot](./Assets/screenshot.png)
 
 ### Deployed Page
 
